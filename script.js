@@ -13,7 +13,18 @@ const randomizedAdventure = () => {
     let randomCondition = Math.floor(Math.random() * adventureData.conditions.length);
     let randomLocation = Math.floor(Math.random() * adventureData.locations.length);
 
-    console.log(`Your story begins on a ${adventureData.conditions[randomCondition]} ${adventureData.times[randomTime]} in the far away ${adventureData.locations[randomLocation]} of these cursed lands.`);
+    console.log(`Your story begins on a ${adventureData.conditions[randomCondition]} ${adventureData.times[randomTime]} in a far away ${adventureData.locations[randomLocation]} within these cursed lands.`);
 }
 
-randomizedAdventure();
+const manyRandomizedAdventures = (num) => {
+    for (i = 0; i < num; i++) {
+    let randomTime = Math.floor(Math.random() * adventureData.times.length);
+    let randomCondition = Math.floor(Math.random() * adventureData.conditions.length);
+    let randomLocation = Math.floor(Math.random() * adventureData.locations.length);
+
+    console.log(`Your story begins on a ${adventureData.conditions[randomCondition]} ${adventureData.times[randomTime]} in a far away ${adventureData.locations[randomLocation]} within these cursed lands.`);
+    }
+}
+
+//randomizedAdventure();
+manyRandomizedAdventures(10);
